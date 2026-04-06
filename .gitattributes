@@ -1,0 +1,3 @@
+frontend/* linguist-vendored
+
+*.rs linguist-detectable=true
