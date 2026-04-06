@@ -1,0 +1,30 @@
+# Rust backend .gitignore
+
+# Build artifacts
+/target/
+
+# If you use Cargo's generated lockfile for libs you might want to keep Cargo.lock,
+# for applications it's recommended to commit it. Do not ignore Cargo.lock by default.
+
+# Binaries
+**/*.rlib
+**/*.dll
+**/*.dylib
+**/*.so
+**/*.exe
+
+# Tests / coverage
+/coverage/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment files
+.env
+.env.*
+
+# Misc
+*.log
+.DS_Store

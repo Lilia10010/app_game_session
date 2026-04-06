@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* Neon Colors */
+  --color-neon-cyan: #00f3ff;
+  --color-neon-pink: #ff006e;
+  --color-neon-green: #39ff14;
+  --color-neon-purple: #9d00ff;
+
+  /* Dark Backgrounds */
+  --color-black-deep: #000000;
+  --color-black-soft: #0a0a0a;
+  --color-purple-dark: #1a0033;
+  --color-purple-darker: #2d0a4e;
+  --color-blue-dark: #001a33;
+  --color-blue-darker: #00132a;
+
+  /* Typography */
+  --font-primary: "Orbitron", "Impact", "Arial Black", sans-serif;
+  --font-secondary: "Rajdhani", "Arial Narrow", "Arial", sans-serif;
+  --font-mono: "Share Tech Mono", "Courier New", monospace;
+
+  /* Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+  --font-size-5xl: 5rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+}
+
+@layer base {
+  body {
+    @apply bg-black-deep text-white antialiased;
+    background: linear-gradient(180deg, #000000 0%, #1a0033 50%, #000000 100%);
+    min-height: 100vh;
+    font-family: var(--font-secondary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    @apply tracking-wider uppercase;
+  }
+}
+
+@layer components {
+  .futuristic-border {
+    position: relative;
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .futuristic-border::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: -1px; right: -1px; bottom: -1px;
+    background: linear-gradient(45deg, var(--color-neon-cyan), transparent, var(--color-neon-purple));
+    z-index: -1;
+    opacity: 0.2;
+  }
+}

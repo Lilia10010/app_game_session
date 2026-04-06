@@ -1,0 +1,41 @@
+# Frontend .gitignore (Node + Vite + React + Tailwind)
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
+
+# dependencies
+/node_modules/
+
+# production
+/dist/
+/build/
+
+# Vite dev server cache
+/.vite/
+
+# bundler cache
+.cache/
+
+# local files
+*.local
+
+# environment
+.env
+.env.*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# coverage
+/coverage/
+
